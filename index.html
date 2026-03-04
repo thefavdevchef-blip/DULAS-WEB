@@ -70,7 +70,16 @@
 
         video { width: 100%; border-radius: 20px; }
 
-        /* COUNTDOWN STYLE */
+        /* SLOGAN BARU */
+        .slogan-text {
+            color: var(--accent-gold);
+            font-size: 12px;
+            margin: 20px 0;
+            padding: 0 15px;
+            line-height: 1.6;
+            text-shadow: 2px 2px #000;
+        }
+
         .countdown-container {
             background: var(--lasagna-red);
             margin: 20px;
@@ -156,6 +165,10 @@
         </video>
     </div>
 
+    <div class="slogan-text">
+        LAYERS OF TASTE, LAYERS OF GAINS.
+    </div>
+
     <div class="countdown-container">
         <div class="countdown-title">🚀 PRESALE STARTS IN:</div>
         <div id="timer">
@@ -204,7 +217,6 @@
     }
 
     function startCountdown() {
-        // TARGET: March 7, 2026, 15:00 UTC
         const targetDate = new Date("2026-03-07T15:00:00Z").getTime();
 
         const x = setInterval(function() {
