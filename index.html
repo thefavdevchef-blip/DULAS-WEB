@@ -6,35 +6,48 @@
     <title>$DULAS - 1st Dumpling Lasagna on Solana</title>
     <style>
         :root { --primary: #00ff00; --secondary: #ffcc00; --bg: #0b0e11; }
-        body { background-color: var(--bg); color: #ffffff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
-        h1 { color: var(--primary); font-size: 2.5rem; }
-        .stats { background: #1a1d23; padding: 15px; border-radius: 10px; margin: 10px 0; border-left: 4px solid var(--primary); text-align: left; }
-        .btn { display: inline-block; background: var(--primary); color: #000; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; }
+        body { background-color: var(--bg); color: #ffffff; font-family: 'Arial Black', sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
+        .hero { padding: 40px 20px; background: linear-gradient(180deg, rgba(0,255,0,0.1) 0%, rgba(11,14,17,1) 100%); }
+        h1 { color: var(--primary); font-size: 3.5rem; text-shadow: 0 0 20px var(--primary); margin: 0; }
+        video { width: 90%; max-width: 400px; border: 3px solid var(--primary); border-radius: 20px; box-shadow: 0 0 30px rgba(0,255,0,0.4); margin: 20px 0; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
+        .card { background: #1a1d23; padding: 15px; border-radius: 12px; border-bottom: 3px solid var(--primary); text-align: left; font-size: 0.8rem; }
+        .card span { color: var(--secondary); display: block; font-size: 1.1rem; }
+        .burn { background: #721c24; padding: 10px; font-weight: bold; margin: 20px; border-radius: 8px; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0.5; } }
+        .btn { display: block; background: var(--primary); color: #000; padding: 18px; margin: 10px 20px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; }
     </style>
 </head>
 <body>
-    <video width="320" height="240" autoplay muted loop style="border-radius: 15px; margin: 20px auto; display: block;">
-  <source src="Grok_video_2026-02-15-02-25-33.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-    </video>
-    <h1>$DULAS 🥟</h1>
-    <p>1st Dumpling Lasagna on Solana. Cooking for the Moon! 🚀</p>
-    
-    <div style="background: rgba(0,255,0,0.1); padding: 15px; border: 1px solid var(--primary); border-radius: 10px;">
-        <h3 style="color: var(--secondary); margin: 0;">🚀 PRESALE: MARCH 7, 2026</h3>
-        <p>15:00 UTC on GemPad</p>
+    <div class="hero">
+        <h1>$DULAS 🥟</h1>
+        <p>1st Dumpling Lasagna on Solana</p>
+        
+        <video autoplay muted loop playsinline>
+            <source src="grok_video_2026-02-15-02-25-33.mp4" type="video/mp4">
+        </video>
+        
+        <div style="border: 2px dashed var(--secondary); padding: 15px; border-radius: 15px; margin: 10px 20px;">
+            <h3 style="margin:0; color:var(--secondary);">🚀 PRESALE STARTS:</h3>
+            <p style="font-size: 1.3rem; margin:5px 0;">MARCH 7, 2026 - 15:00 UTC</p>
+            <small>Launchpad: GemPad</small>
+        </div>
     </div>
 
-    <div style="margin-top: 30px;">
-        <div class="stats">Hard Cap: <strong>105 SOL</strong></div>
-        <div class="stats">Soft Cap: <strong>53 SOL</strong></div>
-        <div class="stats">Presale Rate: <strong>1 SOL = 47.6M $DULAS</strong></div>
-        <div class="stats">Airdrop: <strong>500,000,000 $DULAS (5%)</strong></div>
+    <div class="grid">
+        <div class="card">Hard Cap: <span>105 SOL</span></div>
+        <div class="card">Soft Cap: <span>53 SOL</span></div>
+        <div class="card">Presale Rate: <span>1 SOL = 47.6M</span></div>
+        <div class="card">Listing Rate: <span>1 SOL = 43M</span></div>
+        <div class="card">Min/Max: <span>0.5 - 3 SOL</span></div>
+        <div class="card">Liquidity: <span>51% (Locked)</span></div>
     </div>
 
-    <p style="color: #ff4444; font-weight: bold;">🔥 100% UNSOLD TOKENS BURNED 🔥</p>
+    <div class="burn">🔥 100% UNSOLD TOKENS BURNED 🔥</div>
 
     <a href="https://t.me/DumplingLasagna" class="btn">JOIN TELEGRAM</a>
     <a href="https://x.com/dumplinglasag" class="btn" style="background: white;">FOLLOW X</a>
+
+    <p style="padding: 20px; font-style: italic; color: #666;">$DULAS MEGA AIRDROP: 500M TOKENS (5%) FOR THE BATCH 3 WARRIORS!</p>
 </body>
 </html>
