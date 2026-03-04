@@ -12,7 +12,6 @@
         }
 
         body {
-            /* BACKGROUND FOTO ANDA */
             background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('IMG-20260304-WA0001.jpg');
             background-attachment: fixed;
             background-size: cover;
@@ -24,7 +23,7 @@
             overflow-x: hidden;
         }
 
-        /* MODAL KONFIRMASI (GERBANG MASUK) */
+        /* 1. GATEKEEPER DENGAN TEKS BARU */
         #gatekeeper {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -53,7 +52,7 @@
 
         .btn-yes:hover { background: var(--lasagna-red); border-color: var(--accent-gold); }
 
-        /* WEBSITE CONTENT */
+        /* 2. MAIN CONTENT */
         #website-content { display: none; }
 
         header {
@@ -61,61 +60,62 @@
             background: linear-gradient(to bottom, rgba(178,34,34,0.6), transparent);
         }
 
-        h1 { font-size: 18px; text-shadow: 4px 4px #000; margin: 0; }
-        .symbol { color: var(--accent-gold); font-size: 14px; margin-top: 15px; }
+        h1 { font-size: 16px; text-shadow: 4px 4px #000; margin: 0; }
+        .symbol { color: var(--accent-gold); font-size: 12px; margin-top: 15px; }
 
-        /* VIDEO LOGO MENYATU */
         .video-container {
             width: 90%;
             max-width: 400px;
-            margin: 0 auto;
+            margin: 20px auto;
             filter: drop-shadow(0 0 15px var(--accent-gold));
         }
 
         video { width: 100%; border-radius: 20px; }
 
-        .slogan-box {
-            padding: 30px 20px;
-            font-size: 14px;
+        .highlight-text {
+            padding: 20px;
+            font-size: 12px;
             color: var(--accent-gold);
-            text-transform: uppercase;
         }
 
-        .vision-section {
+        .vision-box {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             margin: 20px;
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             border: 1px solid rgba(255,255,255,0.2);
             text-align: left;
-            line-height: 1.6;
+            font-size: 8px;
+            line-height: 1.8;
         }
 
-        .vision-section h3 { font-size: 12px; color: var(--accent-gold); margin-bottom: 15px; }
-        .vision-section p { font-size: 8px; color: #ccc; }
+        /* 3. FIXED NUMBERS SECTION */
+        .data-section {
+            margin: 20px;
+            text-align: left;
+        }
 
-        .presale-card {
+        .data-title { font-size: 10px; color: var(--accent-gold); margin-bottom: 15px; text-align: center; }
+
+        .data-card {
+            background: rgba(0,0,0,0.6);
+            border-left: 5px solid var(--lasagna-red);
+            padding: 12px;
+            margin-bottom: 10px;
+            font-size: 7px;
+            line-height: 1.5;
+        }
+
+        .data-card span { color: var(--accent-gold); display: block; margin-top: 5px; font-size: 9px; }
+
+        .airdrop-box {
             background: var(--lasagna-red);
             padding: 20px;
             margin: 20px;
-            font-size: 10px;
             border: 4px solid var(--accent-gold);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            padding: 20px;
-        }
-
-        .stat-item {
-            background: rgba(0,0,0,0.5);
-            border-left: 5px solid var(--accent-gold);
-            padding: 15px;
             font-size: 9px;
-            text-align: left;
+            line-height: 1.5;
         }
 
         .btn-social {
@@ -130,20 +130,22 @@
 
         .btn-tele { background: #0088cc; }
         .btn-x { background: #000; }
+
+        .footer-text { font-size: 7px; color: #666; padding: 40px 20px; line-height: 2; }
     </style>
 </head>
 <body>
 
 <div id="gatekeeper">
-    <h2>ARE YOU READY TO COOK $DULAS? 🥟🍝</h2>
+    <h2>ARE YOU READY TO TRY AND ENJOY $DULAS? 🥟🍝</h2>
     <button class="gate-btn btn-yes" onclick="enterSite()">YES, CHEF!</button>
-    <button class="gate-btn btn-no" onclick="alert('Cooking requires a Billionaire Vision, Chef!')">NO</button>
+    <button class="gate-btn btn-no" onclick="alert('The Billionaire Kitchen is only for the brave!')">NO</button>
 </div>
 
 <div id="website-content">
     <header>
         <h1>DUMPLING LASAGNA</h1>
-        <div class="symbol">$DULAS 🥟🍝</div>
+        <div class="symbol">$DULAS 1st Dumpling Lasagna on Solana 🥟🍝</div>
     </header>
 
     <div class="video-container">
@@ -152,30 +154,41 @@
         </video>
     </div>
 
-    <div class="slogan-box">
-        LAYERS OF TASTE, LAYERS OF GAINS.
+    <div class="highlight-text">LAYERS OF TASTE, LAYERS OF GAINS</div>
+
+    <div class="vision-box">
+        <span style="color:var(--accent-gold)">WELCOME TO $DULAS KITCHEN!</span><br><br>
+        We are building a long-term narrative leading up to March 2026. This is not a short-term play. We are targeting a BILLION MC. This is a life-changing token and the next financial evolution on Solana.
     </div>
 
-    <div class="vision-section">
-        <h3>THE VISION 🚀</h3>
-        <p>WELCOME TO $DULAS KITCHEN! We are building a long-term narrative leading up to March 2026. This gives us enough time to establish a cult-like brand identity that stands out from the '1-day' meme coins.</p>
-        <p style="margin-top: 15px; color: var(--accent-gold);">THIS IS NOT A SHORT-TERM PLAY. We are targeting a BILLION MC. This is a life-changing token and the next financial evolution on Solana.</p>
+    <div class="data-section">
+        <div class="data-title">📊 THE FIXED NUMBERS</div>
+        <div class="data-card">Total Supply: <span>10,000,000,000 $DULAS</span></div>
+        <div class="data-card">Hard Cap / Soft Cap: <span>105 SOL / 53 SOL</span></div>
+        <div class="data-card">Presale Rate: <span>1 SOL = 47,619,047 $DULAS</span></div>
+        <div class="data-card">Listing Rate: <span>1 SOL = 43,000,000 $DULAS</span></div>
+        <div class="data-card">Liquidity Lock: <span>51% for 30 Days</span></div>
+        <div class="data-card">Min/Max Buy: <span>0.5 SOL - 3 SOL</span></div>
+        <div class="data-card" style="border-color: #ff0000;">Unsold Tokens: <span style="color:#ff0000">100% BURNED 🔥</span></div>
     </div>
 
-    <div class="presale-card">
-        🚀 MARCH 7 PRESALE <br> 15:00 UTC ON GEMPAD
+    <div class="airdrop-box">
+        🎁 MEGA AIRDROP (500,000,000 $DULAS)<br><br>
+        We are giving away 5% of total supply to our community!
     </div>
 
-    <div class="stats-grid">
-        <div class="stat-item">HARD CAP: <span style="color:var(--accent-gold)">105 SOL</span></div>
-        <div class="stat-item">MAX BUY: <span style="color:var(--accent-gold)">3 SOL</span></div>
-        <div class="stat-item">LIQUIDITY: <span style="color:var(--accent-gold)">51% LOCKED</span></div>
+    <div style="background: var(--accent-gold); color: #000; padding: 15px; font-size: 10px; margin: 20px;">
+        🚀 PRESALE STARTS: MARCH 7, 2026 - 15:00 UTC ON GEMPAD
     </div>
 
-    <a href="https://t.me/DumplingLasagna" class="btn-social btn-tele">JOIN OFFICIAL TELEGRAM</a>
+    <a href="https://t.me/DumplingLasagna" class="btn-social btn-tele">JOIN TELEGRAM</a>
     <a href="https://x.com/dumplinglasag" class="btn-social btn-x">FOLLOW ON X</a>
 
-    <p style="font-size: 7px; color: #666; padding: 30px;">© 2026 $DULAS. WE COOK UNTIL THE BILLION COMES.</p>
+    <div class="footer-text">
+        © 2026 $DULAS Project.<br>
+        LONG-TERM VISION. CULT BRAND IDENTITY.<br>
+        WE COOK UNTIL THE BILLION COMES. 🚀
+    </div>
 </div>
 
 <script>
