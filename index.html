@@ -150,8 +150,10 @@
             logoVideo.play().catch(e => console.log("Video play blocked")); 
         }
 
-        // Set target date for March 12, 2026 (Presale Start)
-        const countDate = new Date("March 12, 2026 12:32:00 UTC").getTime();
+        // --- UPDATE TARGET TIME DISINI ---
+        // Setting ke 15 Maret 2026, Jam 15:00 UTC
+        const countDate = new Date("March 15, 2026 15:00:00 UTC").getTime();
+        
         setInterval(() => {
             const now = new Date().getTime();
             const gap = countDate - now;
