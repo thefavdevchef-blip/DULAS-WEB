@@ -70,7 +70,6 @@
 
         video { width: 100%; border-radius: 20px; }
 
-        /* SLOGAN BARU */
         .slogan-text {
             color: var(--accent-gold);
             font-size: 12px;
@@ -163,83 +162,3 @@
         <video id="dulasVideo" muted loop playsinline>
             <source src="grok_video_2026-02-15-02-25-33.mp4" type="video/mp4">
         </video>
-    </div>
-
-    <div class="slogan-text">
-        LAYERS OF TASTE, LAYERS OF GAINS.
-    </div>
-
-    <div class="countdown-container">
-        <div class="countdown-title">🚀 PRESALE STARTS IN:</div>
-        <div id="timer">
-            <div class="timer-unit"><div id="days">00</div><span>DAYS</span></div>
-            <div class="timer-unit"><div id="hours">00</div><span>HOURS</span></div>
-            <div class="timer-unit"><div id="minutes">00</div><span>MINS</span></div>
-            <div class="timer-unit"><div id="seconds">00</div><span>SECS</span></div>
-        </div>
-    </div>
-
-    <div class="vision-box">
-        <span style="color:var(--accent-gold)">WELCOME TO $DULAS KITCHEN!</span><br><br>
-        We are building a long-term narrative leading up to March 2026. This is not a short-term play. We are targeting a BILLION MC. This is a life-changing token and the next financial evolution on Solana.
-    </div>
-
-    <div class="data-section">
-        <div class="data-title">📊 TOKENOMICS & TRUST</div>
-        <div class="data-card">Market & Promotion: <span>10% (Growth)</span></div>
-        <div class="data-card">Development: <span>5% (Infrastructure)</span></div>
-        <div class="data-card">Mega Airdrop: <span>500,000,000 $DULAS (5%)</span></div>
-        
-        <div class="data-title" style="margin-top:30px;">📊 THE FIXED NUMBERS</div>
-        <div class="data-card">Total Supply: <span>10,000,000,000 $DULAS</span></div>
-        <div class="data-card">Hard Cap / Soft Cap: <span>105 SOL / 53 SOL</span></div>
-        <div class="data-card">Presale Rate: <span>1 SOL = 47,619,047 $DULAS</span></div>
-        <div class="data-card">Listing Rate: <span>1 SOL = 43,000,000 $DULAS</span></div>
-        <div class="data-card">Liquidity Lock: <span>51% for 30 Days</span></div>
-        <div class="data-card" style="border-color: #ff0000;">Unsold Tokens: <span style="color:#ff0000">100% BURNED 🔥</span></div>
-    </div>
-
-    <a href="https://t.me/DumplingLasagna" class="btn-social btn-tele">JOIN OFFICIAL TELEGRAM</a>
-    <a href="https://x.com/dumplinglasag" class="btn-social btn-x">FOLLOW ON X</a>
-
-    <div class="footer-text">
-        © 2026 $DULAS Project.<br>
-        WE COOK UNTIL THE BILLION COMES. 🚀
-    </div>
-</div>
-
-<script>
-    function enterSite() {
-        document.getElementById('gatekeeper').style.display = 'none';
-        document.getElementById('website-content').style.display = 'block';
-        document.getElementById('dulasVideo').play();
-        startCountdown();
-    }
-
-    function startCountdown() {
-        const targetDate = new Date("2026-03-07T15:00:00Z").getTime();
-
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "PRESALE IS LIVE!";
-            }
-        }, 1000);
-    }
-</script>
-
-</body>
-</html>
