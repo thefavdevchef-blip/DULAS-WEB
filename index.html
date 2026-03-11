@@ -37,7 +37,7 @@
         header { padding: 20px; }
 
         .logo-video {
-            width: 250px; height: auto;
+            width: 220px; height: auto;
             box-shadow: 0 0 30px rgba(218, 165, 32, 0.4);
             margin-bottom: 25px;
         }
@@ -47,7 +47,7 @@
         
         .slogan-main { 
             color: var(--accent-gold); 
-            font-size: 12px; 
+            font-size: 11px; 
             margin: 20px 0; 
             line-height: 1.8;
         }
@@ -115,20 +115,20 @@
     <div class="data-section">
         <div class="data-card"><b>TOTAL SUPPLY</b> 10,000,000,000 $DULAS</div>
         
-        <div class="data-card accent-card"><b>SOFT CAP</b> 100 SOL 🧊</div>
-        <div class="data-card accent-card"><b>HARD CAP</b> 200 SOL 🔥</div>
+        <div class="data-card accent-card"><b>SOFT CAP</b> 55 SOL 🧊</div>
+        <div class="data-card accent-card"><b>HARD CAP</b> 105 SOL 🔥</div>
         
-        <div class="data-card"><b>PRESALE RATE</b> 1 SOL = 22,500,000 $DULAS</div>
-        <div class="data-card"><b>LISTING RATE</b> 1 SOL = 20,500,000 $DULAS</div>
+        <div class="data-card"><b>PRESALE RATE</b> 1 SOL = 45,000,000 $DULAS</div>
+        <div class="data-card"><b>LISTING RATE</b> 1 SOL = 40,000,000 $DULAS</div>
         
         <div class="data-card accent-card"><b>BUY LIMIT MIN</b> 0.3 SOL 🤏</div>
         <div class="data-card accent-card"><b>BUY LIMIT MAX</b> 5.0 SOL 🚀</div>
 
-        <div class="data-card"><b>LIQUIDITY</b> 55% LOCKED (1 YEAR) 🔒</div>
+        <div class="data-card"><b>LIQUIDITY</b> 52% LOCKED (1 YEAR) 🔒</div>
         <div class="data-card"><b>UNSOLD TOKENS</b> 100% BURNED 🔥</div>
         
+        <div class="data-card green-card"><b>🎁 STRATEGIC MARKETING</b> 2,500,000,000 $DULAS (25%)</div>
         <div class="data-card green-card"><b>🎁 MEGA AIRDROP</b> 500,000,000 $DULAS (5%)</div>
-        <div class="data-card accent-card"><b>STRATEGIC MARKETING</b> 23% Reserved for Moonshot</div>
     </div>
 
     <div style="background:rgba(178,34,34,0.9); padding: 25px; margin: 20px; font-size: 10px; border: 3px solid #fff; line-height: 1.8;">
@@ -146,11 +146,12 @@
         document.getElementById('website-content').style.display = 'block';
         const logoVideo = document.getElementById('dulasLogoVideo');
         if(logoVideo) { 
-            logoVideo.muted = true; // Ensure muted to allow autoplay
-            logoVideo.play().catch(e => console.log("Video play blocked by browser")); 
+            logoVideo.muted = true;
+            logoVideo.play().catch(e => console.log("Video play blocked")); 
         }
 
-        const countDate = new Date("March 15, 2026 15:00:00 UTC").getTime();
+        // Set target date for March 12, 2026 (Presale Start)
+        const countDate = new Date("March 12, 2026 12:32:00 UTC").getTime();
         setInterval(() => {
             const now = new Date().getTime();
             const gap = countDate - now;
