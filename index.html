@@ -82,8 +82,14 @@
 <body>
 
 <div id="gatekeeper">
-    <h2 style="color:var(--accent-gold); font-size: 14px; margin-bottom: 30px; text-shadow: 2px 2px #000;">READY TO JOIN THE KITCHEN?</h2>
-    <button class="gate-btn" onclick="enterSite()">YES, CHEF!</button>
+    <h2 style="color:var(--accent-gold); font-size: 14px; margin-bottom: 30px; text-shadow: 2px 2px #000; padding: 0 20px;">READY TO JOIN THE KITCHEN?</h2>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+        <button class="gate-btn" onclick="enterSite()">YES, CHEF!</button>
+        <button class="gate-btn" style="font-size: 12px; border-color: #666; color: #ccc;" 
+                onclick="alert('The Billionaire Kitchen is only for those who are brave enough to be rich!')">
+            NO, I'M NOT READY TO BE RICH
+        </button>
+    </div>
 </div>
 
 <div id="website-content">
@@ -139,9 +145,11 @@
         document.getElementById('gatekeeper').style.display = 'none';
         document.getElementById('website-content').style.display = 'block';
         const logoVideo = document.getElementById('dulasLogoVideo');
-        if(logoVideo) { logoVideo.play(); }
+        if(logoVideo) { 
+            logoVideo.muted = true; // Ensure muted to allow autoplay
+            logoVideo.play().catch(e => console.log("Video play blocked by browser")); 
+        }
 
-        // Set target date for March 15, 2026
         const countDate = new Date("March 15, 2026 15:00:00 UTC").getTime();
         setInterval(() => {
             const now = new Date().getTime();
