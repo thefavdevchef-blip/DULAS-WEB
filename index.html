@@ -14,19 +14,15 @@
         body {
             margin: 0; padding: 0; background: #000; color: #ffffff;
             font-family: 'Press Start 2P', cursive; text-align: center; overflow-x: hidden;
-            /* BACKGROUND GAMBAR DIAM UNTUK SELURUH HALAMAN */
             background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('IMG-20260304-WA0001.jpg');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
 
-        /* GATEKEEPER DENGAN BACKGROUND */
         #gatekeeper {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            /* Menggunakan background yang sama agar transisi smooth */
             background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('IMG-20260304-WA0001.jpg');
             background-size: cover; background-position: center;
-            display: flex; flex-direction: column;
-            justify-content: center; align-items: center; z-index: 1000;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000;
         }
 
         .gate-btn {
@@ -40,32 +36,24 @@
 
         header { padding: 20px; }
 
-        /* LOGO VIDEO BERGERAK - TANPA BORDER */
         .logo-video {
             width: 250px; height: auto;
             box-shadow: 0 0 30px rgba(218, 165, 32, 0.4);
             margin-bottom: 25px;
         }
 
-        /* JUDUL SATU BARIS */
-        h1 { 
-            font-size: 20px; 
-            text-shadow: 4px 4px #000; 
-            margin: 15px 0 5px 0; 
-            white-space: nowrap; 
-        }
-        
+        h1 { font-size: 20px; text-shadow: 4px 4px #000; margin: 15px 0 5px 0; white-space: nowrap; }
         .token-symbol { color: var(--accent-gold); font-size: 22px; margin: 10px 0 25px 0; text-shadow: 2px 2px #000; }
         
-        /* SLOGAN SATU BARIS */
+        /* SLOGAN DUA BARIS ATAS BAWAH */
         .slogan-main { 
             color: var(--accent-gold); 
-            font-size: 11px; 
+            font-size: 12px; 
             margin: 20px 0; 
-            white-space: nowrap; 
-            padding: 0 10px;
+            line-height: 1.8;
             letter-spacing: 1px;
         }
+
         .slogan-sub { color: #fff; font-size: 9px; margin-top: 15px; opacity: 0.9; line-height: 1.8; }
 
         .countdown-container {
@@ -117,7 +105,11 @@
         <h1>DUMPLING LASAGNA</h1>
         <p class="token-symbol">$DULAS</p>
         
-        <p class="slogan-main">LAYERS OF TASTE, LAYERS OF GAINS 🥟📈</p>
+        <p class="slogan-main">
+            LAYERS OF TASTE 🥟<br>
+            LAYERS OF GAINS 📈
+        </p>
+        
         <p class="slogan-sub">1st Dumpling Lasagna on Solana. Cooking for March 2026! 🚀</p>
     </header>
 
