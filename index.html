@@ -1,4 +1,123 @@
-<div class="countdown-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUMPLING LASAGNA - $DULAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lasagna-red: #b22222;
+            --accent-gold: #daa520;
+            --success-green: #27ae60;
+        }
+
+        body {
+            margin: 0; padding: 0; background: #000; color: #ffffff;
+            font-family: 'Press Start 2P', cursive; text-align: center; overflow-x: hidden;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('IMG-20260304-WA0001.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+
+        #gatekeeper {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('IMG-20260304-WA0001.jpg');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000;
+        }
+
+        .gate-btn {
+            padding: 20px; border: 4px solid #fff; background: rgba(0,0,0,0.6);
+            color: #fff; font-family: 'Press Start 2P', cursive; cursor: pointer; font-size: 16px;
+            width: 320px;
+        }
+        .gate-btn:hover { background: var(--lasagna-red); border-color: var(--accent-gold); }
+
+        #website-content { display: none; position: relative; z-index: 1; padding-bottom: 60px; padding-top: 20px;}
+
+        header { padding: 20px; }
+
+        .logo-video {
+            width: 220px; height: auto;
+            box-shadow: 0 0 30px rgba(218, 165, 32, 0.4);
+            margin-bottom: 25px;
+        }
+
+        h1 { font-size: 18px; text-shadow: 4px 4px #000; margin: 15px 0 5px 0; }
+        .token-symbol { color: var(--accent-gold); font-size: 22px; margin: 10px 0 25px 0; text-shadow: 2px 2px #000; }
+        
+        .slogan-main { 
+            color: var(--accent-gold); 
+            font-size: 11px; 
+            margin: 20px 0; 
+            line-height: 1.8;
+        }
+
+        .countdown-container {
+            background: rgba(178, 34, 34, 0.9); margin: 25px auto; padding: 25px;
+            border: 4px solid var(--accent-gold); width: 85%; max-width: 550px;
+        }
+        #timer { display: flex; justify-content: space-around; font-size: 16px; color: var(--accent-gold); }
+        .timer-unit span { display: block; font-size: 8px; color: #fff; margin-top: 8px; }
+
+        /* PROGRESS BAR STYLES */
+        .progress-container {
+            max-width: 550px; margin: 20px auto; padding: 0 20px;
+        }
+        .progress-text { font-size: 8px; text-align: left; margin-bottom: 10px; color: var(--accent-gold); }
+        .progress-bar-bg { width: 100%; height: 30px; background: #333; border: 3px solid #fff; position: relative; }
+        .progress-bar-fill { width: 0%; height: 100%; background: var(--accent-gold); transition: width 1s; }
+
+        /* BUTTON BUY */
+        .btn-buy {
+            display: inline-block; margin-top: 20px; padding: 18px 35px; 
+            background: var(--success-green); color: white; text-decoration: none; 
+            border: 4px solid #fff; font-size: 14px; box-shadow: 0 5px 0 #1e8449;
+        }
+        .btn-buy:active { transform: translateY(5px); box-shadow: none; }
+
+        .data-section { margin: 35px 20px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .data-card { 
+            background: rgba(0,0,0,0.85); border-left: 6px solid var(--lasagna-red); 
+            padding: 18px; margin-bottom: 12px; font-size: 10px; line-height: 1.6;
+        }
+        .data-card b { color: var(--accent-gold); display: block; margin-bottom: 8px; font-size: 12px; }
+        .accent-card { border-left-color: var(--accent-gold); }
+        .green-card { border-left-color: #27ae60; }
+
+        .btn-social { 
+            display: block; padding: 22px; margin: 18px 20px; text-decoration: none; 
+            color: #fff; font-size: 13px; border: 4px solid #fff; max-width: 450px; 
+            margin-left: auto; margin-right: auto; 
+        }
+        .btn-tele { background: #0088cc; }
+        .btn-x { background: #000; }
+    </style>
+</head>
+<body>
+
+<div id="gatekeeper">
+    <h2 style="color:var(--accent-gold); font-size: 14px; margin-bottom: 30px; text-shadow: 2px 2px #000; padding: 0 20px;">READY TO JOIN THE KITCHEN?</h2>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+        <button class="gate-btn" onclick="enterSite()">YES, CHEF!</button>
+        <button class="gate-btn" style="font-size: 12px; border-color: #666; color: #ccc;" 
+                onclick="alert('The Billionaire Kitchen is only for those who are brave enough to be rich!')">
+            NO, I'M NOT READY TO BE RICH
+        </button>
+    </div>
+</div>
+
+<div id="website-content">
+    <header>
+        <video autoplay muted loop playsinline class="logo-video" id="dulasLogoVideo">
+            <source src="grok_video_2026-02-15-02-25-33.mp4" type="video/mp4">
+        </video>
+        <h1>DUMPLING LASAGNA</h1>
+        <p class="token-symbol">$DULAS</p>
+        <p class="slogan-main">LAYERS OF TASTE 🥟<br>LAYERS OF GAINS 📈</p>
+    </header>
+
+    <div class="countdown-container">
         <div style="font-size: 9px; margin-bottom: 15px;">PRESALE STARTS IN:</div>
         <div id="timer">
             <div class="timer-unit"><div id="days">00</div><span>DAYS</span></div>
@@ -7,28 +126,52 @@
             <div class="timer-unit"><div id="seconds">00</div><span>SECS</span></div>
         </div>
         
-        <a href="https://solsale.app/presale/E5ahxQ9WbsiJtAbpidQxERxBBmWbA8RcCMdDhHtcs6cg" 
-           target="_blank" 
-           style="display: inline-block; margin-top: 25px; padding: 15px 30px; background: #27ae60; color: white; text-decoration: none; border: 3px solid #fff; font-size: 14px;">
-           BUY $DULAS NOW 🥟
+        <a href="https://solsale.app/presale/E5ahxQ9WbsiJtAbpidQxERxBBmWbA8RcCMdDhHtcs6cg" target="_blank" class="btn-buy">
+            BUY $DULAS NOW 🥟
         </a>
     </div>
 
-    <div style="max-width: 550px; margin: 20px auto; padding: 0 20px;">
-        <div style="font-size: 8px; text-align: left; margin-bottom: 8px;">PROGRESS: <span id="sol-raised">0</span> / 105 SOL</div>
-        <div style="width: 100%; height: 25px; background: #333; border: 3px solid var(--accent-gold); position: relative;">
-            <div id="progress-fill" style="width: 0%; height: 100%; background: var(--accent-gold);"></div>
+    <div class="progress-container">
+        <div class="progress-text">KITCHEN PROGRESS: <span id="raised-val">0</span> / 105 SOL</div>
+        <div class="progress-bar-bg">
+            <div id="bar-fill" class="progress-bar-fill"></div>
         </div>
-        <div style="font-size: 7px; margin-top: 8px; color: #ccc;">*Data refreshes on GemPad page</div>
     </div>
+
+    <div class="data-section">
+        <div class="data-card"><b>TOTAL SUPPLY</b> 10,000,000,000 $DULAS</div>
+        <div class="data-card accent-card"><b>SOFT CAP</b> 55 SOL 🧊</div>
+        <div class="data-card accent-card"><b>HARD CAP</b> 105 SOL 🔥</div>
+        <div class="data-card"><b>PRESALE RATE</b> 1 SOL = 45,000,000 $DULAS</div>
+        <div class="data-card"><b>LISTING RATE</b> 1 SOL = 40,000,000 $DULAS</div>
+        <div class="data-card accent-card"><b>BUY LIMIT MIN</b> 0.3 SOL 🤏</div>
+        <div class="data-card accent-card"><b>BUY LIMIT MAX</b> 5.0 SOL 🚀</div>
+        <div class="data-card"><b>LIQUIDITY</b> 52% LOCKED (1 YEAR) 🔒</div>
+        <div class="data-card"><b>UNSOLD TOKENS</b> 100% BURNED 🔥</div>
+        <div class="data-card green-card"><b>🎁 STRATEGIC MARKETING</b> 2,500,000,000 $DULAS (25%)</div>
+        <div class="data-card green-card"><b>🎁 MEGA AIRDROP</b> 500,000,000 $DULAS (5%)</div>
+    </div>
+
+    <div style="background:rgba(178,34,34,0.9); padding: 25px; margin: 20px; font-size: 10px; border: 3px solid #fff; line-height: 1.8;">
+        PRESALE DURATION: MAX 14 DAYS<br>
+        <span style="color:var(--accent-gold);">LAUNCHING IMMEDIATELY ONCE HARDCAP IS FILLED! 🔥</span>
+    </div>
+
+    <a href="https://t.me/DumplingLasagna" class="btn-social btn-tele">JOIN TELEGRAM</a>
+    <a href="https://x.com/DulasSolana" class="btn-social btn-x">FOLLOW ON X</a>
+</div>
 
 <script>
     function enterSite() {
         document.getElementById('gatekeeper').style.display = 'none';
         document.getElementById('website-content').style.display = 'block';
-        
-        // --- UPDATE TARGET TIME KE JAM 7 PAGI BESOK ---
-        // 23:00 UTC = Jam 07:00 WITA
+        const logoVideo = document.getElementById('dulasLogoVideo');
+        if(logoVideo) { 
+            logoVideo.muted = true;
+            logoVideo.play().catch(e => console.log("Video play blocked")); 
+        }
+
+        // --- TARGET: 15 Maret 2026, 23:00 UTC (Jam 7 Pagi WITA) ---
         const countDate = new Date("March 15, 2026 23:00:00 UTC").getTime();
         
         setInterval(() => {
@@ -43,10 +186,12 @@
                 document.getElementById("seconds").innerText = Math.floor((gap % minute) / second).toString().padStart(2, '0');
             } else {
                 document.getElementById("timer").innerHTML = "<div style='width:100%; color:#27ae60;'>PRESALE IS LIVE!</div>";
-                // Jika sudah LIVE, progress bar bisa kita geser sedikit buat narik psikologi pembeli
-                document.getElementById("progress-fill").style.width = "2%"; 
-                document.getElementById("sol-raised").innerText = "2.1";
+                // Animasi Bar saat sudah live
+                document.getElementById("bar-fill").style.width = "5%"; 
+                document.getElementById("raised-val").innerText = "5.2";
             }
         }, 1000);
     }
 </script>
+</body>
+</html>
